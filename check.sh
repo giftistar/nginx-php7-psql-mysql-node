@@ -22,6 +22,20 @@ else
     fi
 fi
 
+CRON_FILE=/var/www/html/crontab/mk_crontab
+if test -f "$CRON_FILE"; then
+    echo "$CRON_FILE exist"
+    cp $CRON_FILE /etc/cron.d/mk_crontab
+    chmod 0644 /etc/cron.d/mk_crontab
+    crontab /etc/cron.d/mk_crontab
+    touch /var/www/html/crontab/log/cron.log
+    service cron restart
+    echo "done init crontab"
+    crontab -l
+else    
+    echo "$CRON_FILE does not exist"    
+fi
+
 
 FILE=/var/www/html/start.sh
 if test -f "$FILE"; then
@@ -29,6 +43,9 @@ if test -f "$FILE"; then
     cd /var/www/html
     sh start.sh
 fi
+
+
+
 
 echo 'done init check process'
 

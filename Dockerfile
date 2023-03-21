@@ -37,7 +37,7 @@ RUN apt-get install -y curl
 RUN apt-get install -y git
 RUN apt-get install -y vim
 
-# RUN apt-get install -y cron
+RUN apt-get install -y cron
 RUN apt-get install -y gnupg
 RUN apt-get install -y mysql-client
 
@@ -45,7 +45,8 @@ RUN apt-get install -y nginx php php7.0-fpm php7.0-mysql php7.0-gd php7.0-xml ph
 RUN apt-get install -y php7.0-mbstring 
 RUN apt-get install -y php7.0-zip
 
-
+ENV TZ=Asia/Seoul
+RUN apt-get install -y tzdata
 
 RUN mkdir /data
 
