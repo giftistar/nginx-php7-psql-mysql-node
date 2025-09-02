@@ -1,6 +1,6 @@
 #!/bin/bash    
 ENV_LIST=$(printenv)
-TARGET_FILE=/etc/php/7.0/fpm/pool.d/www.conf
+TARGET_FILE=/etc/php/7.4/fpm/pool.d/www.conf
 echo "" >> $TARGET_FILE
 while read -r line
 do 

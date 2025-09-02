@@ -36,7 +36,7 @@ server {
 
         location ~ \.php$ {
                 include snippets/fastcgi-php.conf;
-                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+                fastcgi_pass unix:/run/php/php7.4-fpm.sock;
 
                 		# 아래부터 버그 해결을 위해 추가해 주실 옵션입니다.
         # 502 에러를 없애기 위한 proxy 버퍼 관련 설정입니다.
