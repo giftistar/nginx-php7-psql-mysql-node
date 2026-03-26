@@ -4,7 +4,7 @@
 
 설치항목
 mysql-client, git, php7.0, php7.0-curl, php7.0-mbstring, nginx postgresql-client php php7.0-fpm php7.0-pgsql php7.0-mysql php7.0-gd php7.0-xml php7.0-intl phpunit
-test
+
 start.sh 파일이 있을 경우 시작 시 실행됨
 
 /data 폴더에 persistent 데이터가 저장됨
